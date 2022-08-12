@@ -7,5 +7,5 @@ COPY . /app
 RUN npm run build --prod
 FROM nginx:1.20.1
 COPY --from=build-step /app/dist/ng-docker-example /usr/share/nginx/html
-EXPOSE 4200
+EXPOSE 4400
 EXPOSE 80
